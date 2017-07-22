@@ -13,8 +13,7 @@ package CantTales;
 			userName = nameReader.nextLine();
 			System.out.println("Hello, " + userName + ". \n" );			
 			System.out.println("April, 1384. London.");
-			System.out.println("You approach the Tabard Inn in Southwark."
-							+ "\nYou hear a group of diverse folk talking merrily.");
+			System.out.println("You approach the Tabard Inn in Southwark.\nYou hear a group of diverse folk talking merrily.");
 			System.out.println("\nWould you like to join them, " + userName + "?");
 			int y = 0;
 				while (y == 0){
@@ -51,27 +50,26 @@ package CantTales;
 
  
 package CantTales;
-import java.util.concurrent.ThreadLocalRandom;
-public class Pilgrim {
+	import java.util.concurrent.ThreadLocalRandom;
 
-	String pilgrimName;
-	int linesPerHour;
+	public class Pilgrim {
 
-public String getPilgrimName(){
-	return pilgrimName;
-}
+		String pilgrimName;
+		int linesPerHour;
 
-public int getLinesPerHour(){
-	return linesPerHour;
-}
+	public String getPilgrimName(){
+		return pilgrimName;
+	}
 
-public static Pilgrim[] Pilgrims;
+	public int getLinesPerHour(){
+		return linesPerHour;
+	}
 
-public static void meetPilgrims() {
-	Pilgrims = new Pilgrim[32];
-	System.out.println("\nThis group of medieval misfits are readying to set"
-						+ "\noff on a pilgrimage to the shrine of Thomas Becket"
-						+ "\nin Canterbury Cathedral.");
+	public static Pilgrim[] Pilgrims;
+
+	public static void meetPilgrims() {
+		Pilgrims = new Pilgrim[32];
+		System.out.println("\nThis group of medieval misfits are readying to set\noff on a pilgrimage to the shrine of Thomas Becket\nin Canterbury Cathedral.");
 
 	for (int x = 0; x < (Pilgrims.length) - 1; x++) {
 		Pilgrims[x] = new Pilgrim();
@@ -148,13 +146,8 @@ public static void meetPilgrims() {
 		
 		int seatOne = ThreadLocalRandom.current().nextInt(0, 16);
 		int seatTwo = ThreadLocalRandom.current().nextInt(16, 30);
-		System.out.println("Look, " + CanterburyTales.getName()
-							+ ", they've budged up to make room for you;"
-							+ "\ntake a seat between "
-							+ Pilgrims[seatOne].pilgrimName
-							+ " and " + Pilgrims[seatTwo].pilgrimName + ".\n");
-
-}
+		System.out.println("Look, " + CanterburyTales.getName() + ", they've budged up to make room for you;\ntake a seat between "+ Pilgrims[seatOne].pilgrimName + " and " + Pilgrims[seatTwo].pilgrimName + ".\n");
+	}
 }
  
 package CantTales;
@@ -180,11 +173,10 @@ public class Tale {
 
 	public static void makeTales(){
 		
-		System.out.println("Since Canterbury is " + Journey.PILGRIMAGE_MILES + " miles away,"
-							+ "\nthe pilgrims decide to think up tales to tell one"
-							+ "\nanother to pass the time.");
+		System.out.println("Since Canterbury is " + Journey.PILGRIMAGE_MILES + " miles away,\nthe pilgrims decide to think up tales to tell one\nanother to pass the time.");
 		
 		Tales = new Tale[24];
+		
 		for (int x = 0; x < (Tales.length); x++) {
 			Tales[x] = new Tale();
 			Tales[x].score = 0;
@@ -384,11 +376,9 @@ public class Tale {
 	
 	public static void chooseFirstTale(){
 	
-		System.out.println("\n" +CanterburyTales.userName + ", the pilgrims are asking you to decide whose"
-						+ "\ntale should be told first.");
+		System.out.println("\n" +CanterburyTales.userName + ", the pilgrims are asking you to decide whose\ntale should be told first.");
 		System.out.println("\nTo help you decide, I'm going to ask you four questions.");
-		System.out.println("These questions involve four key themes from medieval"
-						+ "\nstorytelling: Gentillesse, Maistree, Harlotrye and Agrisen.");
+		System.out.println("These questions involve four key themes from medieval\nstorytelling: Gentillesse, Maistree, Harlotrye and Agrisen.");
 		System.out.println("\nWould you like a definition of these?");
 	
 		int y = 0;
@@ -397,17 +387,10 @@ public class Tale {
 				String defAnswer = decisionReader.nextLine();
 				
 					if (defAnswer.equals("Yes")){
-						System.out.println("\n\t> Gentillesse means gentility or honourable virtue."
-											+ "\n\t  A tale full of Gentillesse is likely to test its"
-											+ "\n\t  characters to prove they are pure and good.");
-						System.out.println("\t> Maistree means mastery or superiority over others."
-											+ "\n\t  A tale full of Maistree is likely to involve"
-											+ "\n\t  a battle of wits, strength or both.");
-						System.out.println("\t> Harlotrye means ribaldry, foolishness and humour."
-											+ "\n\t  A tale full of Harlotrye will make you"
-											+ "\n\t  laugh...or blush.");
-						System.out.println("\t> Agrisen means to tremble or to grimace."
-											+ "\n\t  These tales will be gruesome and unsettling.");
+						System.out.println("\n\t> Gentillesse means gentility or honourable virtue.\n\t  A tale full of Gentillesse is likely to test its\n\t  characters to prove they are pure and good.");
+						System.out.println("\t> Maistree means mastery or superiority over others.\n\t  A tale full of Maistree is likely to involve\n\t  a battle of wits, strength or both.");
+						System.out.println("\t> Harlotrye means ribaldry, foolishness and humour.\n\t  A tale full of Harlotrye will make you\n\t  laugh...or blush.");
+						System.out.println("\t> Agrisen means to tremble or to grimace.\n\t  These tales will be gruesome and unsettling.");
 						y++;
 					}
 					
@@ -457,8 +440,7 @@ public class Tale {
 				harlAnswer = harlReader.nextInt();
 			}
 	
-		System.out.println("\nAnd finally, to what extent do you wish to hear a tale"
-				+ "\nthat will make you Agrisen?");
+		System.out.println("\nAnd finally, to what extent do you wish to hear a tale\nthat will make you Agrisen?");
 	
 			while (agrAnswer < 0 || agrAnswer > 5) {
 				System.out.print("Please enter a number between 0 and 5: ");
