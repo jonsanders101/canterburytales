@@ -27,7 +27,7 @@ import java.util.Scanner;
 						System.out.println("\nHmm...not even for just one ale?");
 					}
 						
-					else {
+					else { //checks user input
 						System.out.println("\nSorry, I didn't catch that.");
 					}
 			}	
@@ -75,7 +75,7 @@ import java.util.concurrent.ThreadLocalRandom;
 				Pilgrims[x] = new Pilgrim();
 			}
 
-			Pilgrims[0].pilgrimName = "The Knight";
+			Pilgrims[0].pilgrimName = "The Knight"; //there are more pilgrims than tales in Chaucer's text
 			Pilgrims[0].linesPerHour = 1654;
 			Pilgrims[1].pilgrimName = "The Miller";
 			Pilgrims[1].linesPerHour = 1244;
@@ -142,9 +142,9 @@ import java.util.concurrent.ThreadLocalRandom;
 		
 			Pilgrims[(Pilgrims.length) - 1] = new Pilgrim();
 			Pilgrims[(Pilgrims.length) - 1].pilgrimName = CanterburyTales.getName();
-			Pilgrims[(Pilgrims.length) - 1].linesPerHour = 100;
+			Pilgrims[(Pilgrims.length) - 1].linesPerHour = 100; //unused
 		
-			int seatOne = ThreadLocalRandom.current().nextInt(0, 16);
+			int seatOne = ThreadLocalRandom.current().nextInt(0, 16); //choosing two random pilgrims to sit next to
 			int seatTwo = ThreadLocalRandom.current().nextInt(16, 30);
 			System.out.println("Look, " + CanterburyTales.getName() + ", they've budged up to make room for you;\ntake a seat between "+ Pilgrims[seatOne].pilgrimName + " and " + Pilgrims[seatTwo].pilgrimName + ".\n");
 		}
@@ -182,7 +182,7 @@ import java.util.Scanner;
 				Tales[x].score = 0;
 			}	
 		
-				Tales[0].tellerNum = 0;
+				Tales[0].tellerNum = 0; //data for each of the tales
 				Tales[0].title = "Palamon & Arcite";
 				Tales[0].gentillesse = 5;
 				Tales[0].maistree = 3;
