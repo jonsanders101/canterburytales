@@ -1,4 +1,4 @@
-# Canterbury Tales
+# The Canterbury Tales
 My first experiment with Java
 This is my first ever programming project and is the result of my initial steps in self-teaching in Java.
 
